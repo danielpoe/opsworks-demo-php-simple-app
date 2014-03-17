@@ -56,7 +56,7 @@ require_once(__DIR__.'/../../shared/config/opsworks.php');
 					echo 'Encrypted: '.$encrypted;
 					echo '<hr>Decrypted: '.decrypt($encrypted,$iv_size,$key);
 					//some random encryption
-					for ($i=0;$i<1000;$i++) {
+					for ($i=0;$i<100000;$i++) {
 						$plaintext = rand(0,99999999);
 						$encrypted = encrypt($plaintext,$iv_size,$key);
 						decrypt($encrypted,$iv_size,$key);
